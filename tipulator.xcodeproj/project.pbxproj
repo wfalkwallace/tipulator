@@ -161,6 +161,7 @@
 				TargetAttributes = {
 					E6CDD7E11A3E97AD00F4FA5F = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = BDMC9C2X5M;
 					};
 					E6CDD7F61A3E97AD00F4FA5F = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -405,6 +406,7 @@
 				E6CDD8031A3E97AD00F4FA5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E6CDD8041A3E97AD00F4FA5F /* Build configuration list for PBXNativeTarget "tipulatorTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +415,7 @@
 				E6CDD8061A3E97AD00F4FA5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
