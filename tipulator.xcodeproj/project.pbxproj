@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E6A7C22C1A53A6510067E25B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A7C22B1A53A6510067E25B /* SettingsViewController.swift */; };
+		E6A7C2311A53AE580067E25B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6CDD7EB1A3E97AD00F4FA5F /* Main.storyboard */; };
+		E6A7C2321A53AE5D0067E25B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6CDD7F01A3E97AD00F4FA5F /* LaunchScreen.xib */; };
 		E6CDD7E81A3E97AD00F4FA5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CDD7E71A3E97AD00F4FA5F /* AppDelegate.swift */; };
 		E6CDD7EA1A3E97AD00F4FA5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CDD7E91A3E97AD00F4FA5F /* ViewController.swift */; };
-		E6CDD7ED1A3E97AD00F4FA5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6CDD7EB1A3E97AD00F4FA5F /* Main.storyboard */; };
 		E6CDD7EF1A3E97AD00F4FA5F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6CDD7EE1A3E97AD00F4FA5F /* Images.xcassets */; };
-		E6CDD7F21A3E97AD00F4FA5F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6CDD7F01A3E97AD00F4FA5F /* LaunchScreen.xib */; };
 		E6CDD7FE1A3E97AD00F4FA5F /* tipulatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CDD7FD1A3E97AD00F4FA5F /* tipulatorTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E6A7C22B1A53A6510067E25B /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		E6CDD7E21A3E97AD00F4FA5F /* tipulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tipulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6CDD7E61A3E97AD00F4FA5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6CDD7E71A3E97AD00F4FA5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		E6CDD7E41A3E97AD00F4FA5F /* tipulator */ = {
 			isa = PBXGroup;
 			children = (
+				E6A7C22B1A53A6510067E25B /* SettingsViewController.swift */,
 				E6CDD7E71A3E97AD00F4FA5F /* AppDelegate.swift */,
 				E6CDD7E91A3E97AD00F4FA5F /* ViewController.swift */,
 				E6CDD7EB1A3E97AD00F4FA5F /* Main.storyboard */,
@@ -161,7 +164,6 @@
 				TargetAttributes = {
 					E6CDD7E11A3E97AD00F4FA5F = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = BDMC9C2X5M;
 					};
 					E6CDD7F61A3E97AD00F4FA5F = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -193,8 +195,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6CDD7ED1A3E97AD00F4FA5F /* Main.storyboard in Resources */,
-				E6CDD7F21A3E97AD00F4FA5F /* LaunchScreen.xib in Resources */,
+				E6A7C2321A53AE5D0067E25B /* LaunchScreen.xib in Resources */,
+				E6A7C2311A53AE580067E25B /* Main.storyboard in Resources */,
 				E6CDD7EF1A3E97AD00F4FA5F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6CDD7EA1A3E97AD00F4FA5F /* ViewController.swift in Sources */,
+				E6A7C22C1A53A6510067E25B /* SettingsViewController.swift in Sources */,
 				E6CDD7E81A3E97AD00F4FA5F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,6 +340,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = tipulator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -347,6 +351,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = tipulator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
