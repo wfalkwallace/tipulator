@@ -76,10 +76,10 @@
             </objects>
             <point key="canvasLocation" x="186" y="359"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="jBq-cg-hsU">
             <objects>
-                <viewController id="etB-Sj-7ez" sceneMemberID="viewController">
+                <viewController id="etB-Sj-7ez" customClass="SettingsViewController" customModule="tipulator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3QP-nB-BG9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

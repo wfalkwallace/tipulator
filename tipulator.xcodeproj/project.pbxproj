@@ -13,6 +13,7 @@
 		E6A7C2491A54A56D0067E25B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6A7C2481A54A56D0067E25B /* Images.xcassets */; };
 		E6A7C24C1A54A56D0067E25B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6A7C24A1A54A56D0067E25B /* LaunchScreen.xib */; };
 		E6A7C2581A54A56D0067E25B /* tipulatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A7C2571A54A56D0067E25B /* tipulatorTests.swift */; };
+		E6A7C2621A54C0CA0067E25B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A7C2611A54C0CA0067E25B /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		E6A7C2511A54A56D0067E25B /* tipulatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tipulatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6A7C2561A54A56D0067E25B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6A7C2571A54A56D0067E25B /* tipulatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tipulatorTests.swift; sourceTree = "<group>"; };
+		E6A7C2611A54C0CA0067E25B /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				E6A7C2411A54A56D0067E25B /* AppDelegate.swift */,
 				E6A7C2431A54A56D0067E25B /* ViewController.swift */,
 				E6A7C2451A54A56D0067E25B /* Main.storyboard */,
+				E6A7C2611A54C0CA0067E25B /* SettingsViewController.swift */,
 				E6A7C2481A54A56D0067E25B /* Images.xcassets */,
 				E6A7C24A1A54A56D0067E25B /* LaunchScreen.xib */,
 				E6A7C23F1A54A56D0067E25B /* Supporting Files */,
@@ -214,6 +217,7 @@
 			files = (
 				E6A7C2441A54A56D0067E25B /* ViewController.swift in Sources */,
 				E6A7C2421A54A56D0067E25B /* AppDelegate.swift in Sources */,
+				E6A7C2621A54C0CA0067E25B /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
