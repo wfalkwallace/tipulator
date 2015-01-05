@@ -10,10 +10,13 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var tipPercentageValueLow: UITextField!
+    @IBOutlet weak var tipPercentageValueMiddle: UITextField!
+    @IBOutlet weak var tipPercentageValueHigh: UITextField!
+    @IBOutlet weak var defaultTipSelectionControl: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +24,64 @@ class SettingsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func defaultTipValuesChanged(sender: AnyObject) {
+        // get selected settings
+        var defaultTipPercentages =
+        [
+            tipPercentageValueLow.text._bridgeToObjectiveC().doubleValue / 100.0,
+            tipPercentageValueMiddle.text._bridgeToObjectiveC().doubleValue / 100.0,
+            tipPercentageValueHigh.text._bridgeToObjectiveC().doubleValue / 100.0
+        ]
+        // if you clear out the settings, you get the defaults
+        if (defaultTipPercentages[0] == 0.0) {
+            defaultTipPercentages[0] = 0.175
+        }
+        if (defaultTipPercentages[1] == 0.0) {
+            defaultTipPercentages[1] = 0.2
+        }
+        if (defaultTipPercentages[2] == 0.0) {
+            defaultTipPercentages[2] = 0.25
+        }
+        // update text fields with possible defaults
+        tipPercentageValueLow.text = defaultTipPercentages[0] * 100.0
+        tipPercentageValueMiddle.text = defaultTipPercentages[1] * 100.0
+        tipPercentageValueHigh.text = defaultTipPercentages[2] * 100.0
+        // update segmented control titles
+        defaultTipSelectionControl.setTitle(tipPercentageValueLow.text, segment:0)
+        defaultTipSelectionControl.setTitle(tipPercentageValueMiddle.text, segment:1)
+        defaultTipSelectionControl.setTitle(tipPercentageValueHigh.text, segment:2)
+        // save the new values
+        var defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(defaultTipPercentages, forKey: "defaultTipPercentages")
+        defaults.synchronize()
+        
     }
-    */
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        var defaults = NSUserDefaults.standardUserDefaults()
+        var defaultTipPercentages = defaults.arrayForKey("defaultTipPercentages")
+        var defaultTip = defaults.integerForKey("defaultTipIndex")
+        
+        // set the placeholders and segmented titles and selection
+        tipPercentageValueLow.text = defaultTipPercentages[0] * 100.0
+        tipPercentageValueMiddle.text = defaultTipPercentages[1] * 100.0
+        tipPercentageValueHigh.text = defaultTipPercentages[2] * 100.0
+        defaultTipSelectionControl.setTitle(tipPercentageValueLow.text, segment:0)
+        defaultTipSelectionControl.setTitle(tipPercentageValueMiddle.text, segment:1)
+        defaultTipSelectionControl.setTitle(tipPercentageValueHigh.text, segment:2)
+        defaultTipSelectionControl.selectedSegmentIndex = defaultTip
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        var defaults = NSUserDefaults.standardUserDefaults()
+        var defaultTipPercentages = defaults.arrayForKey("defaultTipPercentages")
+        var defaultTip = defaultTipPercentages[defaultTipSelectionControl.selectedSegmentIndex]
+        
+        defaults.setInteger(defaultTip, forKey: "defaultTipIndex")
+        defaults.setObject(defaultTipPercentages, forKey: "defaultTipPercentages")
+        defaults.synchronize()
+    }
 
 }

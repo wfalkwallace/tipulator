@@ -15,6 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        var defaultSettings = ["defaultTipIndex":1, "defaultTipPercentages":[0.175, 0.2, 0.25]]
+        NSUserDefaults.standardUserDefaults().registerDefaults(defaultSettings)
+        
         // Override point for customization after application launch.
         return true
     }

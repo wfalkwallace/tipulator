@@ -89,6 +89,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="defaultTipValuesChanged:" destination="etB-Sj-7ez" eventType="editingChanged" id="bpL-cg-WLq"/>
+                                </connections>
                             </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="CCZ-If-4wj">
                                 <rect key="frame" x="16" y="270" width="288" height="29"/>
@@ -125,12 +128,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="defaultTipValuesChanged:" destination="etB-Sj-7ez" eventType="editingChanged" id="q9r-y8-Oc3"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="5OU-UD-UUS">
                                 <rect key="frame" x="164" y="214" width="80" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="defaultTipValuesChanged:" destination="etB-Sj-7ez" eventType="editingChanged" id="xhv-ev-aRp"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Defaults" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WRf-FT-p1M">
                                 <rect key="frame" x="70" y="59" width="181" height="71"/>
@@ -152,10 +161,16 @@ http://git.io/UVwTbg</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="defaultTipSelectionControl" destination="CCZ-If-4wj" id="Kd6-gt-2hW"/>
+                        <outlet property="tipPercentageValueHigh" destination="5OU-UD-UUS" id="cP8-ug-Iok"/>
+                        <outlet property="tipPercentageValueLow" destination="kDf-Oq-JT3" id="OXk-Vv-CY5"/>
+                        <outlet property="tipPercentageValueMiddle" destination="yQr-Us-I0o" id="3DC-Jq-hPs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jSj-f1-isy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="548" y="359"/>
+            <point key="canvasLocation" x="701" y="359"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
