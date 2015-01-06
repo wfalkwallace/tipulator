@@ -16,6 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+        // style the navbar
+        var navigationBarAppearace = UINavigationBar.appearance()
+        navigationBarAppearace.barTintColor = UIColor(red:0.15, green:0.68, blue:0.38, alpha:1)
+        navigationBarAppearace.tintColor = UIColor(red:0.93, green:0.94, blue:0.95, alpha:1)
+
+        // set up some saved defaults
         var defaultSettings = ["defaultTipIndex":1, "defaultTipPercentages":[0.175, 0.2, 0.25]]
         NSUserDefaults.standardUserDefaults().registerDefaults(defaultSettings)
         
