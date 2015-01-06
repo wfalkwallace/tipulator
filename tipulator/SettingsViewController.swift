@@ -43,13 +43,13 @@ class SettingsViewController: UIViewController {
             defaultTipPercentages[2] = 0.25
         }
         // update text fields with possible defaults
-        tipPercentageValueLow.text = defaultTipPercentages[0] * 100.0
-        tipPercentageValueMiddle.text = defaultTipPercentages[1] * 100.0
-        tipPercentageValueHigh.text = defaultTipPercentages[2] * 100.0
+        tipPercentageValueLow.text = "\(defaultTipPercentages[0] * 100.0)"
+        tipPercentageValueMiddle.text = "\(defaultTipPercentages[1] * 100.0)"
+        tipPercentageValueHigh.text = "\(defaultTipPercentages[2] * 100.0)"
         // update segmented control titles
-        defaultTipSelectionControl.setTitle(tipPercentageValueLow.text, segment:0)
-        defaultTipSelectionControl.setTitle(tipPercentageValueMiddle.text, segment:1)
-        defaultTipSelectionControl.setTitle(tipPercentageValueHigh.text, segment:2)
+        defaultTipSelectionControl.setTitle(tipPercentageValueLow.text, forSegmentAtIndex:0)
+        defaultTipSelectionControl.setTitle(tipPercentageValueMiddle.text, forSegmentAtIndex:1)
+        defaultTipSelectionControl.setTitle(tipPercentageValueHigh.text, forSegmentAtIndex:2)
         // save the new values
         var defaults = NSUserDefaults.standardUserDefaults()
         defaults.setObject(defaultTipPercentages, forKey: "defaultTipPercentages")
@@ -60,25 +60,27 @@ class SettingsViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         var defaults = NSUserDefaults.standardUserDefaults()
-        var defaultTipPercentages = defaults.arrayForKey("defaultTipPercentages")
+        var defaultTipPercentages = defaults.arrayForKey("defaultTipPercentages") as [Double]
         var defaultTip = defaults.integerForKey("defaultTipIndex")
         
-        // set the placeholders and segmented titles and selection
-        tipPercentageValueLow.text = defaultTipPercentages[0] * 100.0
-        tipPercentageValueMiddle.text = defaultTipPercentages[1] * 100.0
-        tipPercentageValueHigh.text = defaultTipPercentages[2] * 100.0
-        defaultTipSelectionControl.setTitle(tipPercentageValueLow.text, segment:0)
-        defaultTipSelectionControl.setTitle(tipPercentageValueMiddle.text, segment:1)
-        defaultTipSelectionControl.setTitle(tipPercentageValueHigh.text, segment:2)
+        // update text fields with defaults
+        tipPercentageValueLow.text = "\(defaultTipPercentages[0] * 100.0)"
+        tipPercentageValueMiddle.text = "\(defaultTipPercentages[1] * 100.0)"
+        tipPercentageValueHigh.text = "\(defaultTipPercentages[2] * 100.0)"
+        // update segmented control titles
+        defaultTipSelectionControl.setTitle(tipPercentageValueLow.text, forSegmentAtIndex:0)
+        defaultTipSelectionControl.setTitle(tipPercentageValueMiddle.text, forSegmentAtIndex:1)
+        defaultTipSelectionControl.setTitle(tipPercentageValueHigh.text, forSegmentAtIndex:2)
+        // set default selection
         defaultTipSelectionControl.selectedSegmentIndex = defaultTip
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         var defaults = NSUserDefaults.standardUserDefaults()
-        var defaultTipPercentages = defaults.arrayForKey("defaultTipPercentages")
-        var defaultTip = defaultTipPercentages[defaultTipSelectionControl.selectedSegmentIndex]
-        
+        var defaultTipPercentages = defaults.arrayForKey("defaultTipPercentages") as [Double]
+        var defaultTip = defaultTipSelectionControl.selectedSegmentIndex
+
         defaults.setInteger(defaultTip, forKey: "defaultTipIndex")
         defaults.setObject(defaultTipPercentages, forKey: "defaultTipPercentages")
         defaults.synchronize()
