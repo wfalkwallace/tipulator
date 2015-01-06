@@ -18,9 +18,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // style the navbar
         var navigationBarAppearace = UINavigationBar.appearance()
-        navigationBarAppearace.barTintColor = UIColor(red:0.15, green:0.68, blue:0.38, alpha:1)
+        navigationBarAppearace.barTintColor = UIColor(red:0.17, green:0.24, blue:0.31, alpha:1)
         navigationBarAppearace.tintColor = UIColor(red:0.93, green:0.94, blue:0.95, alpha:1)
 
+        // add the navbar logo
+        // var navigationLogoImageView = UIImageView()
+        // navigationLogoImageView.contentMode = .ScaleAspectFit
+        // var navigationLogoImage = UIImage(named: "logo-text-light")
+        // navigationLogoImageView.image = navigationLogoImage
+        // UINavigationBar.appearance().addSubview(navigationLogoImageView)
+        
         // set up some saved defaults
         var defaultSettings = ["defaultTipIndex":1, "defaultTipPercentages":[0.175, 0.2, 0.25]]
         NSUserDefaults.standardUserDefaults().registerDefaults(defaultSettings)
