@@ -45,7 +45,8 @@ class ViewController: UIViewController {
 
     
     @IBAction func onEditingChanged(sender: AnyObject) {
-        var tipPercentages = [0.175, 0.2, 0.25]
+        var defaults = NSUserDefaults.standardUserDefaults()
+        var tipPercentages = defaults.arrayForKey("defaultTipPercentages") as [Double]
         var tipPercentage = tipPercentages[tipControl.selectedSegmentIndex]
         
         var billAmount = billField.text._bridgeToObjectiveC().doubleValue
@@ -67,15 +68,15 @@ class ViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         var defaults = NSUserDefaults.standardUserDefaults()
-        var defaultTipPercentages = defaults.arrayForKey("defaultTipPercentages") as [Double]
-        var defaultTip = defaults.integerForKey("defaultTipIndex")
+        var tipPercentages = defaults.arrayForKey("defaultTipPercentages") as [Double]
+        var tipPercentageIndex = defaults.integerForKey("defaultTipIndex")
 
         // update segmented control titles
-        tipControl.setTitle("\(defaultTipPercentages[0] * 100.0)", forSegmentAtIndex:0)
-        tipControl.setTitle("\(defaultTipPercentages[1] * 100.0)", forSegmentAtIndex:1)
-        tipControl.setTitle("\(defaultTipPercentages[2] * 100.0)", forSegmentAtIndex:2)
+        tipControl.setTitle("\(tipPercentages[0] * 100.0)", forSegmentAtIndex:0)
+        tipControl.setTitle("\(tipPercentages[1] * 100.0)", forSegmentAtIndex:1)
+        tipControl.setTitle("\(tipPercentages[2] * 100.0)", forSegmentAtIndex:2)
         // set default selection
-        tipControl.selectedSegmentIndex = defaultTip
+        tipControl.selectedSegmentIndex = tipPercentageIndex
     }
 
 }
