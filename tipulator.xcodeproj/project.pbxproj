@@ -409,6 +409,7 @@
 				E6A7C25D1A54A56D0067E25B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E6A7C25E1A54A56D0067E25B /* Build configuration list for PBXNativeTarget "tipulatorTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +418,7 @@
 				E6A7C2601A54A56D0067E25B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
