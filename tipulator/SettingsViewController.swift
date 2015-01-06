@@ -43,9 +43,9 @@ class SettingsViewController: UIViewController {
             defaultTipPercentages[2] = 0.25
         }
         // update text fields with possible defaults
-        tipPercentageValueLow.text = "\(defaultTipPercentages[0] * 100.0)"
-        tipPercentageValueMiddle.text = "\(defaultTipPercentages[1] * 100.0)"
-        tipPercentageValueHigh.text = "\(defaultTipPercentages[2] * 100.0)"
+        tipPercentageValueLow.text = String(format:"%g", defaultTipPercentages[0] * 100.0)
+        tipPercentageValueMiddle.text = String(format:"%g", defaultTipPercentages[1] * 100.0)
+        tipPercentageValueHigh.text = String(format:"%g", defaultTipPercentages[2] * 100.0)
         // update segmented control titles
         defaultTipSelectionControl.setTitle(tipPercentageValueLow.text, forSegmentAtIndex:0)
         defaultTipSelectionControl.setTitle(tipPercentageValueMiddle.text, forSegmentAtIndex:1)
@@ -64,9 +64,9 @@ class SettingsViewController: UIViewController {
         var defaultTip = defaults.integerForKey("defaultTipIndex")
         
         // update text fields with defaults
-        tipPercentageValueLow.text = "\(defaultTipPercentages[0] * 100.0)"
-        tipPercentageValueMiddle.text = "\(defaultTipPercentages[1] * 100.0)"
-        tipPercentageValueHigh.text = "\(defaultTipPercentages[2] * 100.0)"
+        tipPercentageValueLow.text = String(format:"%g", defaultTipPercentages[0] * 100.0)
+        tipPercentageValueMiddle.text = String(format:"%g", defaultTipPercentages[1] * 100.0)
+        tipPercentageValueHigh.text = String(format:"%g", defaultTipPercentages[2] * 100.0)
         // update segmented control titles
         defaultTipSelectionControl.setTitle(tipPercentageValueLow.text, forSegmentAtIndex:0)
         defaultTipSelectionControl.setTitle(tipPercentageValueMiddle.text, forSegmentAtIndex:1)

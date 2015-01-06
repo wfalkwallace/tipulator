@@ -72,9 +72,9 @@ class ViewController: UIViewController {
         var tipPercentageIndex = defaults.integerForKey("defaultTipIndex")
 
         // update segmented control titles
-        tipControl.setTitle("\(tipPercentages[0] * 100.0)", forSegmentAtIndex:0)
-        tipControl.setTitle("\(tipPercentages[1] * 100.0)", forSegmentAtIndex:1)
-        tipControl.setTitle("\(tipPercentages[2] * 100.0)", forSegmentAtIndex:2)
+        tipControl.setTitle(String(format:"%g", tipPercentages[0] * 100.0), forSegmentAtIndex:0)
+        tipControl.setTitle(String(format:"%g", tipPercentages[1] * 100.0), forSegmentAtIndex:1)
+        tipControl.setTitle(String(format:"%g", tipPercentages[2] * 100.0), forSegmentAtIndex:2)
         // set default selection
         tipControl.selectedSegmentIndex = tipPercentageIndex
     }
