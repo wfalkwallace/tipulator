@@ -126,6 +126,7 @@ http://git.io/UVwTbg</string>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kDf-Oq-JT3">
                                 <rect key="frame" x="164" y="151" width="80" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
                                 <connections>
@@ -161,6 +162,7 @@ http://git.io/UVwTbg</string>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yQr-Us-I0o">
                                 <rect key="frame" x="164" y="189" width="80" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
                                 <connections>
@@ -169,6 +171,7 @@ http://git.io/UVwTbg</string>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5OU-UD-UUS">
                                 <rect key="frame" x="164" y="227" width="80" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
                                 <connections>
@@ -183,11 +186,15 @@ http://git.io/UVwTbg</string>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.20392158630000001" green="0.2823529541" blue="0.36862745879999997" alpha="1" colorSpace="deviceRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="WRf-FT-p1M" secondAttribute="centerX" id="EvW-Dd-gCj"/>
                             <constraint firstAttribute="centerX" secondItem="CCZ-If-4wj" secondAttribute="centerX" id="TuQ-3X-5WN"/>
                             <constraint firstAttribute="centerX" secondItem="xUy-j1-pjb" secondAttribute="centerX" id="eRA-KX-VcJ"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="bLi-9P-MyS" appends="YES" id="Urb-a7-4Mk"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="Ml4-l7-gQh"/>
                     <connections>
@@ -198,6 +205,11 @@ http://git.io/UVwTbg</string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jSj-f1-isy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="bLi-9P-MyS">
+                    <connections>
+                        <action selector="onTap:" destination="etB-Sj-7ez" id="qjb-vd-8Nr"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1765" y="359"/>
         </scene>

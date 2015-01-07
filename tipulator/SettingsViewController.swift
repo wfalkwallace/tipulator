@@ -86,4 +86,8 @@ class SettingsViewController: UIViewController {
         defaults.synchronize()
     }
 
+    
+    @IBAction func onTap(sender: AnyObject) {
+        view.endEditing(true)
+    }
 }
