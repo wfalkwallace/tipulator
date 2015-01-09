@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // var navigationLogoImage = UIImage(named: "logo-text-light")
         // navigationLogoImageView.image = navigationLogoImage
         // UINavigationBar.appearance().addSubview(navigationLogoImageView)
-        
+                
         // set up some saved defaults
         var defaultSettings = ["defaultTipIndex":1, "defaultTipPercentages":[0.175, 0.2, 0.25]]
         NSUserDefaults.standardUserDefaults().registerDefaults(defaultSettings)
