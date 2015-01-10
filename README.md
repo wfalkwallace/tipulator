@@ -5,8 +5,13 @@ Codepath iOS Course Tip Calculator Prework
 
 - Overall time to complete iOS tip calculator app (the minimum specified in the video) was about 20-25 minutes.
 - Adding in and hooking up the settings page took two to three hours (my connection between SettingsViewController and my storyboard UIViewController got fouled up after changing some filepaths on disk and I ended up starting clean and porting in my previous work)
-- Style and features took another hour or two (most of that time was trying to figure out how to get a UIImageView into the UINavigationBar Title in XCode6 :)
+- Style and features took another few hours (most of that time was trying to figure out how to get a UIImageView into the UINavigationBar Title in XCode6 :)
 
 That brings total time to around 3-5 hours.
 
+---
 
+Design decisions:
+
+- Nobody really tips low anymore... most people will tip around 20% and bump that to 25ish for great service and they tend to have two (normal and high) values in mind. I simplified the defaults to 2 settable options to reflect that practice. I considered adding functionality to override that, but KISS.
+-
