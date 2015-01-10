@@ -55,12 +55,15 @@ class ViewController: UIViewController {
 
     
     @IBAction func onEditingChanged(sender: AnyObject) {
-        var defaults = NSUserDefaults.standardUserDefaults()
-        var tipPercentages = defaults.arrayForKey("defaultTipPercentages") as [Double]
+        var tipPercentages = [
+            lowTipSelector.titleLabel!.text!._bridgeToObjectiveC().doubleValue / 100.0,
+            highTipSelector.titleLabel!.text!._bridgeToObjectiveC().doubleValue / 100.0
+        ]
+        var splitValue = Double(splitControl.selectedSegmentIndex + 1)
         var tipPercentageIndex = lowTipSelector.selected ? 0 : 1
         var tipPercentage = tipPercentages[tipPercentageIndex]
         
-        var billAmount = billField.text._bridgeToObjectiveC().doubleValue
+        var billAmount = billField.text._bridgeToObjectiveC().doubleValue / splitValue
         var tip = billAmount * tipPercentage
         var total = billAmount + tip
         
@@ -73,6 +76,10 @@ class ViewController: UIViewController {
     
     @IBAction func onTap(sender: AnyObject) {
         view.endEditing(true)
+    }
+    
+    @IBAction func editingDidBegin(sender: UITextField) {
+        sender.text = ""
     }
     
     @IBAction func highTipSelected(sender: AnyObject) {
@@ -100,6 +107,7 @@ class ViewController: UIViewController {
         var defaults = NSUserDefaults.standardUserDefaults()
         var tipPercentages = defaults.arrayForKey("defaultTipPercentages") as [Double]
         var tipPercentageIndex = defaults.integerForKey("defaultTipIndex")
+        var splitIndex = defaults.integerForKey("defaultSplitIndex")
         
         if (tipPercentageIndex == 0) {
             lowTipSelected(self)
@@ -111,12 +119,8 @@ class ViewController: UIViewController {
         lowTipSelector.setTitle(String(format:"%g%%", tipPercentages[0] * 100.0), forState:UIControlState())
         highTipSelector.setTitle(String(format:"%g%%", tipPercentages[1] * 100.0), forState:UIControlState())
 
-        // update segmented control titles
-        // tipControl.setTitle(String(format:"%g", tipPercentages[0] * 100.0), forSegmentAtIndex:0)
-        // tipControl.setTitle(String(format:"%g", tipPercentages[1] * 100.0), forSegmentAtIndex:1)
-        // tipControl.setTitle(String(format:"%g", tipPercentages[2] * 100.0), forSegmentAtIndex:2)
         // set default selection
-        // tipControl.selectedSegmentIndex = tipPercentageIndex
+         splitControl.selectedSegmentIndex = splitIndex
     }
 
 }
