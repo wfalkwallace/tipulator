@@ -58,6 +58,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E6338E791A61A8B500F8006B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E6A7C2431A54A56D0067E25B /* ViewController.swift */,
+				E6A7C2611A54C0CA0067E25B /* SettingsViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
 		E6A7C2331A54A56D0067E25B = {
 			isa = PBXGroup;
 			children = (
@@ -80,9 +89,8 @@
 			isa = PBXGroup;
 			children = (
 				E6A7C2411A54A56D0067E25B /* AppDelegate.swift */,
-				E6A7C2431A54A56D0067E25B /* ViewController.swift */,
+				E6338E791A61A8B500F8006B /* View Controllers */,
 				E6A7C2451A54A56D0067E25B /* Main.storyboard */,
-				E6A7C2611A54C0CA0067E25B /* SettingsViewController.swift */,
 				E6A7C2481A54A56D0067E25B /* Images.xcassets */,
 				E6A7C24A1A54A56D0067E25B /* LaunchScreen.xib */,
 				E6A7C23F1A54A56D0067E25B /* Supporting Files */,
