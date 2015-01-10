@@ -91,6 +91,7 @@ class ViewController: UIViewController {
 
         highTipSelectorHighlight.backgroundColor = UIColor(red:0.35, green:0.47, blue:0.6, alpha:0)
         lowTipSelectorHighlight.backgroundColor = UIColor(red:0.35, green:0.47, blue:0.6, alpha:1)
+        
         onEditingChanged(self)
     }
     
