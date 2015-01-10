@@ -25,6 +25,7 @@ class SettingsViewController: UIViewController {
         var defaults = NSUserDefaults.standardUserDefaults()
         var defaultTipPercentages = defaults.arrayForKey("defaultTipPercentages") as [Double]
         var defaultTipIndex = defaults.integerForKey("defaultTipIndex")
+        var defaultSplitIndex = defaults.integerForKey("defaultSplitIndex")
         
         // update text fields with defaults
         tipPercentageValueLow.text = String(format:"%g", defaultTipPercentages[0] * 100.0)
@@ -33,11 +34,12 @@ class SettingsViewController: UIViewController {
         // update button selector titles and layout
         tipPercentageSelectorLow.setTitle(tipPercentageValueLow.text, forState: UIControlState())
         tipPercentageSelectorHigh.setTitle(tipPercentageValueHigh.text, forState: UIControlState())
-        tipPercentageSelectorLow.layer.cornerRadius = 10
-        tipPercentageSelectorHigh.layer.cornerRadius = 10
+        tipPercentageSelectorHighlightLow.layer.cornerRadius = 10
+        tipPercentageSelectorHighlightHigh.layer.cornerRadius = 10
         
-        // set default selection
+        // set default selections
         defaultTipIndex == 0 ? lowTipSelected(self) : highTipSelected(self)
+        defaultSplitSelectionControl.selectedSegmentIndex = defaultSplitIndex
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,7 +60,10 @@ class SettingsViewController: UIViewController {
 
         // update text fields with possible defaults
         tipPercentageValueLow.text = String(format:"%g", defaultTipPercentages[0] * 100.0)
-        tipPercentageValueHigh.text = String(format:"%g", defaultTipPercentages[2] * 100.0)
+        tipPercentageValueHigh.text = String(format:"%g", defaultTipPercentages[1] * 100.0)
+        
+        tipPercentageSelectorLow.setTitle(tipPercentageValueLow.text, forState: UIControlState())
+        tipPercentageSelectorHigh.setTitle(tipPercentageValueHigh.text, forState: UIControlState())
     }
     
     @IBAction func lowTipSelected(sender: AnyObject) {
@@ -90,14 +95,20 @@ class SettingsViewController: UIViewController {
             tipPercentageValueHigh.text._bridgeToObjectiveC().doubleValue / 100.0
         ]
         var defaultTipIndex = tipPercentageSelectorLow.selected ? 0 : 1
+        var defaultSplitIndex = defaultSplitSelectionControl.selectedSegmentIndex
+        
         
         // save the defaults
         var defaults = NSUserDefaults.standardUserDefaults()
         defaults.setInteger(defaultTipIndex, forKey: "defaultTipIndex")
+        defaults.setInteger(defaultSplitIndex, forKey: "defaultSplitIndex")
         defaults.setObject(defaultTipPercentages, forKey: "defaultTipPercentages")
         defaults.synchronize()
     }
 
+    @IBAction func editingDidBegin(sender: UITextField) {
+        sender.text = ""
+    }
     
     @IBAction func onTap(sender: AnyObject) {
         view.endEditing(true)
