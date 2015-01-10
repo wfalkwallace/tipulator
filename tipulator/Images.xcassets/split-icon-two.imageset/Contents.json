@@ -3,17 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "plate.png"
+      "filename" : "split2.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "plate-1.png"
+      "filename" : "split2-1.png"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "plate-2.png"
+      "filename" : "split2-2.png"
     }
   ],
   "info" : {
