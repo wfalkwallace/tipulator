@@ -207,6 +207,31 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Js0-jL-ync">
+                                <rect key="frame" x="201" y="145" width="50" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBe-5R-65f">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="20%">
+                                            <color key="titleColor" red="0.88683832910000004" green="0.88683832910000004" blue="0.88683832910000004" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="lowTipSelected:" destination="etB-Sj-7ez" eventType="touchUpInside" id="LPd-QP-x8y"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.27777765809999999" green="0.3880026244" blue="0.53651147960000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="LBe-5R-65f" secondAttribute="centerY" id="14A-pg-rbC"/>
+                                    <constraint firstAttribute="centerX" secondItem="LBe-5R-65f" secondAttribute="centerX" id="6eO-fs-viY"/>
+                                    <constraint firstItem="LBe-5R-65f" firstAttribute="width" secondItem="Js0-jL-ync" secondAttribute="width" id="arS-jn-fC9"/>
+                                    <constraint firstItem="LBe-5R-65f" firstAttribute="height" secondItem="Js0-jL-ync" secondAttribute="height" id="zuQ-Tr-e7u"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gjh-Ku-g6L">
                                 <rect key="frame" x="201" y="183" width="50" height="30"/>
                                 <subviews>
@@ -220,6 +245,7 @@
                                         </state>
                                         <connections>
                                             <action selector="highTipSelected:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="CAS-RQ-my7"/>
+                                            <action selector="highTipSelected:" destination="etB-Sj-7ez" eventType="touchUpInside" id="T6r-q7-URe"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -230,31 +256,6 @@
                                     <constraint firstAttribute="centerY" secondItem="cVn-b0-zhC" secondAttribute="centerY" id="PLu-UB-XCO"/>
                                     <constraint firstAttribute="width" secondItem="cVn-b0-zhC" secondAttribute="width" id="meh-AD-tz8"/>
                                     <constraint firstAttribute="centerX" secondItem="cVn-b0-zhC" secondAttribute="centerX" id="why-fx-2j4"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Js0-jL-ync">
-                                <rect key="frame" x="201" y="145" width="50" height="30"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBe-5R-65f">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="20%">
-                                            <color key="titleColor" red="0.88683832910000004" green="0.88683832910000004" blue="0.88683832910000004" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="lowTipSelected:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="0oM-AL-dmj"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.27777765809999999" green="0.3880026244" blue="0.53651147960000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="centerY" secondItem="LBe-5R-65f" secondAttribute="centerY" id="14A-pg-rbC"/>
-                                    <constraint firstAttribute="centerX" secondItem="LBe-5R-65f" secondAttribute="centerX" id="6eO-fs-viY"/>
-                                    <constraint firstItem="LBe-5R-65f" firstAttribute="width" secondItem="Js0-jL-ync" secondAttribute="width" id="arS-jn-fC9"/>
-                                    <constraint firstItem="LBe-5R-65f" firstAttribute="height" secondItem="Js0-jL-ync" secondAttribute="height" id="zuQ-Tr-e7u"/>
                                 </constraints>
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kDf-Oq-JT3">
@@ -325,6 +326,11 @@ http://git.io/UVwTbg</string>
                     </view>
                     <navigationItem key="navigationItem" id="Ml4-l7-gQh"/>
                     <connections>
+                        <outlet property="defaultSplitSelectionControl" destination="rB9-aC-1Sf" id="EgJ-Tb-rc9"/>
+                        <outlet property="tipPercentageSelectorHigh" destination="cVn-b0-zhC" id="eCG-P7-10N"/>
+                        <outlet property="tipPercentageSelectorHighlightHigh" destination="gjh-Ku-g6L" id="yPN-kk-Bkz"/>
+                        <outlet property="tipPercentageSelectorHighlightLow" destination="Js0-jL-ync" id="n6r-Kn-9bQ"/>
+                        <outlet property="tipPercentageSelectorLow" destination="LBe-5R-65f" id="h5U-Rr-qj5"/>
                         <outlet property="tipPercentageValueHigh" destination="5OU-UD-UUS" id="cP8-ug-Iok"/>
                         <outlet property="tipPercentageValueLow" destination="kDf-Oq-JT3" id="OXk-Vv-CY5"/>
                     </connections>
