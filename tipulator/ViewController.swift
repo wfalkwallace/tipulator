@@ -23,21 +23,11 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var navigationSettingsButton: UIButton!
 
+    var currencySymbols = ["$","£","€","¥","₹","₩"]
+    var currencySymbol = "$"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        var navigationSettingsButton:UIButton = UIButton.buttonWithType(UIButtonType.Custom) as UIButton
-//        myBackButton.addTarget(self, action: "popToRoot:", forControlEvents: UIControlEvents.TouchUpInside)
-//        
-//        var myCustomBackButtonItem:UIBarButtonItem = UIBarButtonItem(customView: myBackButton)
-//        self.navigationItem.leftBarButtonItem = myCustomBackButtonItem
-//        
-//        self.navigationItem.titleView = UIImageView.initialize()
-//            navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"smallWhiteLogoforStatusBar.png"]];
-//        
-//        [btnTwo setImage:btnImage forState:UIControlStateNormal];
-//        UIImage *btnImage = [UIImage imageNamed:@"image.png"];
         
         tipLabel.text = ""
         totalLabel.text = ""
@@ -67,11 +57,11 @@ class ViewController: UIViewController {
         var tip = billAmount * tipPercentage
         var total = billAmount + tip
         
-        tipLabel.text = "$\(tip)"
-        totalLabel.text = "$\(total)"
+        tipLabel.text = "\(tip)"
+        totalLabel.text = "\(total)"
         
         tipLabel.text = String(format: "%.2f", tip)
-        totalLabel.text = String(format: "$%.2f", total)
+        totalLabel.text = currencySymbol + String(format: "%.2f", total)
     }
     
     @IBAction func onTap(sender: AnyObject) {
@@ -86,8 +76,11 @@ class ViewController: UIViewController {
         lowTipSelector.selected = false
         highTipSelector.selected = true
 
-        lowTipSelectorHighlight.backgroundColor = UIColor(red:0.35, green:0.47, blue:0.6, alpha:0)
-        highTipSelectorHighlight.backgroundColor = UIColor(red:0.35, green:0.47, blue:0.6, alpha:1)
+        UIView.animateWithDuration(0.2, animations: {
+            // This causes first view to fade in and second view to fade out
+//            self.lowTipSelectorHighlight.backgroundColor = nil
+//            self.highTipSelectorHighlight.backgroundColor = UIColor(red:0.35, green:0.47, blue:0.6, alpha:1)
+        })
         
         onEditingChanged(self)
     }
@@ -96,9 +89,12 @@ class ViewController: UIViewController {
         highTipSelector.selected = false
         lowTipSelector.selected = true
 
-        highTipSelectorHighlight.backgroundColor = UIColor(red:0.35, green:0.47, blue:0.6, alpha:0)
-        lowTipSelectorHighlight.backgroundColor = UIColor(red:0.35, green:0.47, blue:0.6, alpha:1)
-        
+        UIView.animateWithDuration(0.2, animations: {
+            // This causes first view to fade in and second view to fade out
+//            self.highTipSelectorHighlight.backgroundColor = nil
+//            self.lowTipSelectorHighlight.backgroundColor = UIColor(red:0.35, green:0.47, blue:0.6, alpha:1)
+        })
+
         onEditingChanged(self)
     }
     
@@ -108,6 +104,8 @@ class ViewController: UIViewController {
         var tipPercentages = defaults.arrayForKey("defaultTipPercentages") as [Double]
         var tipPercentageIndex = defaults.integerForKey("defaultTipIndex")
         var splitIndex = defaults.integerForKey("defaultSplitIndex")
+        var currencySymbolIndex = defaults.integerForKey("defaultCurrencySymbolIndex")
+        currencySymbol = currencySymbols[currencySymbolIndex]
         
         if (tipPercentageIndex == 0) {
             lowTipSelected(self)

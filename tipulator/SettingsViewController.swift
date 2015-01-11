@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
     @IBOutlet weak var tipPercentageValueLow: UITextField!
     @IBOutlet weak var tipPercentageSelectorLow: UIButton!
@@ -17,16 +17,23 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var tipPercentageSelectorHigh: UIButton!
     @IBOutlet weak var tipPercentageSelectorHighlightHigh: UIView!
     @IBOutlet weak var defaultSplitSelectionControl: UISegmentedControl!
+    @IBOutlet weak var currencyPicker: UIPickerView!
     
+    var currencySymbolNames = ["USD $","GBP £","EUR €","JPY ¥","INR ₹","KRW ₩"]
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        currencyPicker.dataSource = self
+        currencyPicker.delegate = self
+        
         // get the stored defaults
         var defaults = NSUserDefaults.standardUserDefaults()
         var defaultTipPercentages = defaults.arrayForKey("defaultTipPercentages") as [Double]
         var defaultTipIndex = defaults.integerForKey("defaultTipIndex")
         var defaultSplitIndex = defaults.integerForKey("defaultSplitIndex")
-        
+        var currencySymbolIndex = defaults.integerForKey("defaultCurrencySymbolIndex")
+
         // update text fields with defaults
         tipPercentageValueLow.text = String(format:"%g", defaultTipPercentages[0] * 100.0)
         tipPercentageValueHigh.text = String(format:"%g", defaultTipPercentages[1] * 100.0)
@@ -40,6 +47,8 @@ class SettingsViewController: UIViewController {
         // set default selections
         defaultTipIndex == 0 ? lowTipSelected(self) : highTipSelected(self)
         defaultSplitSelectionControl.selectedSegmentIndex = defaultSplitIndex
+        currencyPicker.selectRow(currencySymbolIndex, inComponent: 0, animated: true)
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -70,16 +79,22 @@ class SettingsViewController: UIViewController {
         tipPercentageSelectorHigh.selected = false
         tipPercentageSelectorLow.selected = true
         
-        tipPercentageSelectorHighlightHigh.backgroundColor = UIColor(red:0.35, green:0.47, blue:0.6, alpha:0)
-        tipPercentageSelectorHighlightLow.backgroundColor = UIColor(red:0.35, green:0.47, blue:0.6, alpha:1)
+        UIView.animateWithDuration(0.2, animations: {
+            // This causes first view to fade in and second view to fade out
+            self.tipPercentageSelectorHighlightHigh.backgroundColor = nil
+            self.tipPercentageSelectorHighlightLow.backgroundColor = UIColor(red:0.35, green:0.47, blue:0.6, alpha:1)
+        })
     }
     
     @IBAction func highTipSelected(sender: AnyObject) {
         tipPercentageSelectorLow.selected = false
         tipPercentageSelectorHigh.selected = true
         
-        tipPercentageSelectorHighlightLow.backgroundColor = UIColor(red:0.35, green:0.47, blue:0.6, alpha:0)
-        tipPercentageSelectorHighlightHigh.backgroundColor = UIColor(red:0.35, green:0.47, blue:0.6, alpha:1)
+        UIView.animateWithDuration(0.2, animations: {
+            // This causes first view to fade in and second view to fade out
+            self.tipPercentageSelectorHighlightLow.backgroundColor = nil
+            self.tipPercentageSelectorHighlightHigh.backgroundColor = UIColor(red:0.35, green:0.47, blue:0.6, alpha:1)
+        })
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -105,7 +120,7 @@ class SettingsViewController: UIViewController {
         defaults.setObject(defaultTipPercentages, forKey: "defaultTipPercentages")
         defaults.synchronize()
     }
-
+    
     @IBAction func editingDidBegin(sender: UITextField) {
         sender.text = ""
     }
@@ -113,4 +128,24 @@ class SettingsViewController: UIViewController {
     @IBAction func onTap(sender: AnyObject) {
         view.endEditing(true)
     }
+    
+    // pickerview stuff
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return currencySymbolNames.count
+    }
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+        return currencySymbolNames[row]
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        // save is as a default - there's a way to get selected row title
+        // but I don't totally get it yet :/
+        var defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setInteger(row, forKey: "defaultCurrencySymbolIndex")
+        defaults.synchronize()
+    }
+
 }

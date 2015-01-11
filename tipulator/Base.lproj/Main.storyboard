@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Tipulator-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="tipulator" customModuleProvider="target" sceneMemberID="viewController">
@@ -43,7 +43,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJv-1A-WGx">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <color key="tintColor" red="0.28235295414924622" green="0.39215689897537231" blue="0.53333336114883423" alpha="1" colorSpace="deviceRGB"/>
                                                 <state key="normal" title="20%">
                                                     <color key="titleColor" red="0.88683832908163263" green="0.88683832908163263" blue="0.88683832908163263" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -68,7 +68,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1TA-C3-rRg">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <color key="tintColor" red="0.2823529541" green="0.392156899" blue="0.53333336109999996" alpha="1" colorSpace="deviceRGB"/>
                                                 <state key="normal" title="25%">
                                                     <color key="titleColor" red="0.88683832908163263" green="0.88683832908163263" blue="0.88683832908163263" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -112,6 +112,19 @@
                                     <constraint firstItem="tgs-lY-EhZ" firstAttribute="leading" secondItem="SB1-v1-spL" secondAttribute="leading" constant="16" id="v69-sm-mSc"/>
                                 </constraints>
                             </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="YZG-M1-Va3">
+                                <rect key="frame" x="16" y="147" width="288" height="29"/>
+                                <segments>
+                                    <segment title="•"/>
+                                    <segment title="•  •"/>
+                                    <segment title="•  •  •"/>
+                                    <segment title="•  •  •  •"/>
+                                </segments>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="onEditingChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="4DO-h0-I3c"/>
+                                </connections>
+                            </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="50" translatesAutoresizingMaskIntoConstraints="NO" id="0WD-1i-ca3">
                                 <rect key="frame" x="16" y="64" width="288" height="75"/>
                                 <color key="backgroundColor" red="0.16862745579999999" green="0.24313727020000001" blue="0.31372550129999999" alpha="1" colorSpace="deviceRGB"/>
@@ -128,19 +141,6 @@
                                     <action selector="onEditingChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="Rdi-P4-Iow"/>
                                 </connections>
                             </textField>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="YZG-M1-Va3">
-                                <rect key="frame" x="16" y="147" width="288" height="29"/>
-                                <segments>
-                                    <segment title="•"/>
-                                    <segment title="•  •"/>
-                                    <segment title="•  •  •"/>
-                                    <segment title="•  •  •  •"/>
-                                </segments>
-                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <action selector="onEditingChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="4DO-h0-I3c"/>
-                                </connections>
-                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.16862745579999999" green="0.24313727020000001" blue="0.31372550129999999" alpha="1" colorSpace="deviceRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -157,13 +157,14 @@
                             <outletCollection property="gestureRecognizers" destination="elz-1S-Qo4" appends="YES" id="Qo4-u2-4Bp"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" id="yy7-aO-5Cb">
+                    <navigationItem key="navigationItem" title="Tipulator" id="yy7-aO-5Cb">
                         <barButtonItem key="backBarButtonItem" title="Back" id="eSb-zB-Mgo"/>
                         <barButtonItem key="rightBarButtonItem" image="settings-gear-outline" style="plain" id="qd0-tl-BQQ">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1M0-V6-yrj">
-                                <rect key="frame" x="-23" y="-15" width="71" height="30"/>
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1M0-V6-yrj">
+                                <rect key="frame" x="233" y="7" width="112" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Settings">
+                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                <state key="normal" image="settings-gear-outline-light">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -262,16 +263,6 @@
                                     <constraint firstAttribute="centerX" secondItem="cVn-b0-zhC" secondAttribute="centerX" id="why-fx-2j4"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kDf-Oq-JT3">
-                                <rect key="frame" x="113" y="145" width="80" height="30"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert" returnKeyType="done"/>
-                                <connections>
-                                    <action selector="defaultTipValuesChanged:" destination="etB-Sj-7ez" eventType="editingDidEnd" id="mTc-Hg-ORc"/>
-                                    <action selector="editingDidBegin:" destination="etB-Sj-7ez" eventType="editingDidBegin" id="Aru-Wt-94K"/>
-                                </connections>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Low" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HqU-be-8vL">
                                 <rect key="frame" x="65" y="145" width="40" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -318,6 +309,16 @@ http://git.io/UVwTbg</string>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xWC-wE-8nD">
                                 <rect key="frame" x="0.0" y="257" width="320" height="162"/>
                             </pickerView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kDf-Oq-JT3">
+                                <rect key="frame" x="113" y="145" width="80" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="defaultTipValuesChanged:" destination="etB-Sj-7ez" eventType="editingDidEnd" id="mTc-Hg-ORc"/>
+                                    <action selector="editingDidBegin:" destination="etB-Sj-7ez" eventType="editingDidBegin" id="Aru-Wt-94K"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.20392158630000001" green="0.2823529541" blue="0.36862745879999997" alpha="1" colorSpace="deviceRGB"/>
                         <gestureRecognizers/>
@@ -332,6 +333,7 @@ http://git.io/UVwTbg</string>
                     </view>
                     <navigationItem key="navigationItem" id="Ml4-l7-gQh"/>
                     <connections>
+                        <outlet property="currencyPicker" destination="xWC-wE-8nD" id="bFV-oT-uUM"/>
                         <outlet property="defaultSplitSelectionControl" destination="rB9-aC-1Sf" id="EgJ-Tb-rc9"/>
                         <outlet property="tipPercentageSelectorHigh" destination="cVn-b0-zhC" id="eCG-P7-10N"/>
                         <outlet property="tipPercentageSelectorHighlightHigh" destination="gjh-Ku-g6L" id="yPN-kk-Bkz"/>
@@ -370,7 +372,8 @@ http://git.io/UVwTbg</string>
         </scene>
     </scenes>
     <resources>
-        <image name="settings-gear-outline" width="256" height="256"/>
+        <image name="settings-gear-outline" width="45" height="45"/>
+        <image name="settings-gear-outline-light" width="50" height="50"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

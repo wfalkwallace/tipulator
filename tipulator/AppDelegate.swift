@@ -20,16 +20,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var navigationBarAppearace = UINavigationBar.appearance()
         navigationBarAppearace.barTintColor = UIColor(red:0.17, green:0.24, blue:0.31, alpha:1)
         navigationBarAppearace.tintColor = UIColor(red:0.93, green:0.94, blue:0.95, alpha:1)
-
-        // add the navbar logo
+        navigationBarAppearace.titleTextAttributes = [NSFontAttributeName: UIFont(name: "MarketingScript", size: 30)!,
+                                                      NSForegroundColorAttributeName: UIColor.whiteColor()]
+        
+        
+        
+        // let image = UIImage(named: "logo-text-light")
+        // navigationItem.titleView = UIImageView(image: image)
+        
         // var navigationLogoImageView = UIImageView()
         // navigationLogoImageView.contentMode = .ScaleAspectFit
         // var navigationLogoImage = UIImage(named: "logo-text-light")
         // navigationLogoImageView.image = navigationLogoImage
         // UINavigationBar.appearance().addSubview(navigationLogoImageView)
-                
+        
+        
         // set up some saved defaults
-        var defaultSettings = ["defaultTipIndex":1, "defaultTipPercentages":[0.175, 0.2, 0.25]]
+        var defaultSettings = ["defaultTipIndex":0, "defaultSplitIndex":0, "defaultTipPercentages":[0.2, 0.25], "defaultCurrencySymbolIndex":0]
         NSUserDefaults.standardUserDefaults().registerDefaults(defaultSettings)
         
         // Override point for customization after application launch.
