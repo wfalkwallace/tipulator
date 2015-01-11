@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E6338E7C1A62227500F8006B /* MarketingScript.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6338E7B1A62227500F8006B /* MarketingScript.ttf */; };
 		E6A7C2421A54A56D0067E25B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A7C2411A54A56D0067E25B /* AppDelegate.swift */; };
 		E6A7C2441A54A56D0067E25B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A7C2431A54A56D0067E25B /* ViewController.swift */; };
 		E6A7C2471A54A56D0067E25B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6A7C2451A54A56D0067E25B /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E6338E7B1A62227500F8006B /* MarketingScript.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MarketingScript.ttf; sourceTree = "<group>"; };
 		E6A7C23C1A54A56D0067E25B /* tipulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tipulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6A7C2401A54A56D0067E25B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6A7C2411A54A56D0067E25B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,14 @@
 			name = "View Controllers";
 			sourceTree = "<group>";
 		};
+		E6338E7A1A62226500F8006B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E6338E7B1A62227500F8006B /* MarketingScript.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		E6A7C2331A54A56D0067E25B = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +98,7 @@
 		E6A7C23E1A54A56D0067E25B /* tipulator */ = {
 			isa = PBXGroup;
 			children = (
+				E6338E7A1A62226500F8006B /* Resources */,
 				E6A7C2411A54A56D0067E25B /* AppDelegate.swift */,
 				E6338E791A61A8B500F8006B /* View Controllers */,
 				E6A7C2451A54A56D0067E25B /* Main.storyboard */,
@@ -205,6 +216,7 @@
 			files = (
 				E6A7C2471A54A56D0067E25B /* Main.storyboard in Resources */,
 				E6A7C24C1A54A56D0067E25B /* LaunchScreen.xib in Resources */,
+				E6338E7C1A62227500F8006B /* MarketingScript.ttf in Resources */,
 				E6A7C2491A54A56D0067E25B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
