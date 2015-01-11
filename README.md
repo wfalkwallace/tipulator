@@ -15,4 +15,4 @@ Design decisions:
 
 - Nobody really tips low anymore... most people will tip around 20% and bump that to 25ish for great service and they tend to have two (normal and high) values in mind. I simplified the defaults to 2 settable options to reflect that practice. I considered adding functionality to override that, but KISS.
 - Not a fan of storing the last typed tip value for a period of time. That may just be me, though... Would be easy enough to store the entered NSDate and bill value in NSUser defaults before didDisappear (or maybe there's a willBackground?) and fetch it to check on willAppear or didLoad.
-
+- had some animations, mucked up some parts, I'll get there...
