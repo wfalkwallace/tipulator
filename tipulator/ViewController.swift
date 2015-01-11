@@ -75,12 +75,6 @@ class ViewController: UIViewController {
     @IBAction func highTipSelected(sender: AnyObject) {
         lowTipSelector.selected = false
         highTipSelector.selected = true
-
-        UIView.animateWithDuration(0.2, animations: {
-            // This causes first view to fade in and second view to fade out
-//            self.lowTipSelectorHighlight.backgroundColor = nil
-//            self.highTipSelectorHighlight.backgroundColor = UIColor(red:0.35, green:0.47, blue:0.6, alpha:1)
-        })
         
         onEditingChanged(self)
     }
@@ -88,12 +82,6 @@ class ViewController: UIViewController {
     @IBAction func lowTipSelected(sender: AnyObject) {
         highTipSelector.selected = false
         lowTipSelector.selected = true
-
-        UIView.animateWithDuration(0.2, animations: {
-            // This causes first view to fade in and second view to fade out
-//            self.highTipSelectorHighlight.backgroundColor = nil
-//            self.lowTipSelectorHighlight.backgroundColor = UIColor(red:0.35, green:0.47, blue:0.6, alpha:1)
-        })
 
         onEditingChanged(self)
     }

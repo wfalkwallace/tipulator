@@ -78,23 +78,11 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
     @IBAction func lowTipSelected(sender: AnyObject) {
         tipPercentageSelectorHigh.selected = false
         tipPercentageSelectorLow.selected = true
-        
-        UIView.animateWithDuration(0.2, animations: {
-            // This causes first view to fade in and second view to fade out
-            self.tipPercentageSelectorHighlightHigh.backgroundColor = nil
-            self.tipPercentageSelectorHighlightLow.backgroundColor = UIColor(red:0.35, green:0.47, blue:0.6, alpha:1)
-        })
     }
     
     @IBAction func highTipSelected(sender: AnyObject) {
         tipPercentageSelectorLow.selected = false
         tipPercentageSelectorHigh.selected = true
-        
-        UIView.animateWithDuration(0.2, animations: {
-            // This causes first view to fade in and second view to fade out
-            self.tipPercentageSelectorHighlightLow.backgroundColor = nil
-            self.tipPercentageSelectorHighlightHigh.backgroundColor = UIColor(red:0.35, green:0.47, blue:0.6, alpha:1)
-        })
     }
     
     override func viewWillAppear(animated: Bool) {

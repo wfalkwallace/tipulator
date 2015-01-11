@@ -48,12 +48,14 @@
                                                     <color key="titleColor" red="0.88683832908163263" green="0.88683832908163263" blue="0.88683832908163263" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <state key="selected">
+                                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="lowTipSelected:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qeZ-yj-Bgy"/>
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.27777765806089594" green="0.38800262436633726" blue="0.53651147959183676" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="centerX" secondItem="cJv-1A-WGx" secondAttribute="centerX" id="4vg-kZ-Dc1"/>
@@ -78,7 +80,6 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.27777765806089594" green="0.38800262436633726" blue="0.53651147959183676" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" secondItem="1TA-C3-rRg" secondAttribute="height" id="2vY-ey-RiG"/>
@@ -212,80 +213,7 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Js0-jL-ync">
-                                <rect key="frame" x="201" y="145" width="50" height="30"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBe-5R-65f">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="20%">
-                                            <color key="titleColor" red="0.88683832910000004" green="0.88683832910000004" blue="0.88683832910000004" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="lowTipSelected:" destination="etB-Sj-7ez" eventType="touchUpInside" id="LPd-QP-x8y"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.27777765809999999" green="0.3880026244" blue="0.53651147960000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="centerY" secondItem="LBe-5R-65f" secondAttribute="centerY" id="14A-pg-rbC"/>
-                                    <constraint firstAttribute="centerX" secondItem="LBe-5R-65f" secondAttribute="centerX" id="6eO-fs-viY"/>
-                                    <constraint firstItem="LBe-5R-65f" firstAttribute="width" secondItem="Js0-jL-ync" secondAttribute="width" id="arS-jn-fC9"/>
-                                    <constraint firstItem="LBe-5R-65f" firstAttribute="height" secondItem="Js0-jL-ync" secondAttribute="height" id="zuQ-Tr-e7u"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gjh-Ku-g6L">
-                                <rect key="frame" x="201" y="183" width="50" height="30"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVn-b0-zhC">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="25%">
-                                            <color key="titleColor" red="0.88683832910000004" green="0.88683832910000004" blue="0.88683832910000004" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="highTipSelected:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="CAS-RQ-my7"/>
-                                            <action selector="highTipSelected:" destination="etB-Sj-7ez" eventType="touchUpInside" id="T6r-q7-URe"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.27777765809999999" green="0.3880026244" blue="0.53651147960000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" secondItem="cVn-b0-zhC" secondAttribute="height" id="1Vf-dn-Pc4"/>
-                                    <constraint firstAttribute="centerY" secondItem="cVn-b0-zhC" secondAttribute="centerY" id="PLu-UB-XCO"/>
-                                    <constraint firstAttribute="width" secondItem="cVn-b0-zhC" secondAttribute="width" id="meh-AD-tz8"/>
-                                    <constraint firstAttribute="centerX" secondItem="cVn-b0-zhC" secondAttribute="centerX" id="why-fx-2j4"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Low" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HqU-be-8vL">
-                                <rect key="frame" x="65" y="145" width="40" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="High" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o41-lT-OGs">
-                                <rect key="frame" x="65" y="183" width="40" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5OU-UD-UUS">
-                                <rect key="frame" x="113" y="183" width="80" height="30"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert" returnKeyType="done"/>
-                                <connections>
-                                    <action selector="defaultTipValuesChanged:" destination="etB-Sj-7ez" eventType="editingDidEnd" id="lec-yV-o8z"/>
-                                    <action selector="editingDidBegin:" destination="etB-Sj-7ez" eventType="editingDidBegin" id="YQx-Ib-bwX"/>
-                                </connections>
-                            </textField>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rB9-aC-1Sf">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rB9-aC-1Sf">
                                 <rect key="frame" x="16" y="221" width="288" height="29"/>
                                 <segments>
                                     <segment title="•"/>
@@ -295,8 +223,8 @@
                                 </segments>
                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </segmentedControl>
-                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAO-Ot-wkf">
-                                <rect key="frame" x="33" y="468" width="240" height="80"/>
+                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAO-Ot-wkf">
+                                <rect key="frame" x="40" y="468" width="240" height="80"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <string key="text">Questions or Comments?
 Leave a note at 
@@ -306,26 +234,105 @@ http://git.io/UVwTbg</string>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xWC-wE-8nD">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xpa-rV-ai4">
+                                <rect key="frame" x="52" y="135" width="217" height="78"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Js0-jL-ync">
+                                        <rect key="frame" x="151" y="10" width="50" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBe-5R-65f">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <color key="tintColor" red="0.2823529541" green="0.392156899" blue="0.53333336109999996" alpha="1" colorSpace="deviceRGB"/>
+                                                <state key="normal" title="20%">
+                                                    <color key="titleColor" red="0.88683832910000004" green="0.88683832910000004" blue="0.88683832910000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="lowTipSelected:" destination="etB-Sj-7ez" eventType="touchUpInside" id="LPd-QP-x8y"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="centerY" secondItem="LBe-5R-65f" secondAttribute="centerY" id="14A-pg-rbC"/>
+                                            <constraint firstAttribute="centerX" secondItem="LBe-5R-65f" secondAttribute="centerX" id="6eO-fs-viY"/>
+                                            <constraint firstItem="LBe-5R-65f" firstAttribute="width" secondItem="Js0-jL-ync" secondAttribute="width" id="arS-jn-fC9"/>
+                                            <constraint firstItem="LBe-5R-65f" firstAttribute="height" secondItem="Js0-jL-ync" secondAttribute="height" id="zuQ-Tr-e7u"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gjh-Ku-g6L">
+                                        <rect key="frame" x="151" y="48" width="50" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVn-b0-zhC">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
+                                                <color key="tintColor" red="0.2823529541" green="0.392156899" blue="0.53333336109999996" alpha="1" colorSpace="deviceRGB"/>
+                                                <state key="normal" title="25%">
+                                                    <color key="titleColor" red="0.88683832910000004" green="0.88683832910000004" blue="0.88683832910000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="highTipSelected:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="CAS-RQ-my7"/>
+                                                    <action selector="highTipSelected:" destination="etB-Sj-7ez" eventType="touchUpInside" id="T6r-q7-URe"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" secondItem="cVn-b0-zhC" secondAttribute="height" id="1Vf-dn-Pc4"/>
+                                            <constraint firstAttribute="centerY" secondItem="cVn-b0-zhC" secondAttribute="centerY" id="PLu-UB-XCO"/>
+                                            <constraint firstAttribute="width" secondItem="cVn-b0-zhC" secondAttribute="width" id="meh-AD-tz8"/>
+                                            <constraint firstAttribute="centerX" secondItem="cVn-b0-zhC" secondAttribute="centerX" id="why-fx-2j4"/>
+                                        </constraints>
+                                    </view>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kDf-Oq-JT3">
+                                        <rect key="frame" x="63" y="10" width="80" height="30"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert" returnKeyType="done"/>
+                                        <connections>
+                                            <action selector="defaultTipValuesChanged:" destination="etB-Sj-7ez" eventType="editingDidEnd" id="mTc-Hg-ORc"/>
+                                            <action selector="editingDidBegin:" destination="etB-Sj-7ez" eventType="editingDidBegin" id="Aru-Wt-94K"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Low" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HqU-be-8vL">
+                                        <rect key="frame" x="15" y="10" width="40" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="High" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o41-lT-OGs">
+                                        <rect key="frame" x="15" y="48" width="40" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5OU-UD-UUS">
+                                        <rect key="frame" x="63" y="48" width="80" height="30"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert" returnKeyType="done"/>
+                                        <connections>
+                                            <action selector="defaultTipValuesChanged:" destination="etB-Sj-7ez" eventType="editingDidEnd" id="lec-yV-o8z"/>
+                                            <action selector="editingDidBegin:" destination="etB-Sj-7ez" eventType="editingDidBegin" id="YQx-Ib-bwX"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xWC-wE-8nD">
                                 <rect key="frame" x="0.0" y="257" width="320" height="162"/>
                             </pickerView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kDf-Oq-JT3">
-                                <rect key="frame" x="113" y="145" width="80" height="30"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert" returnKeyType="done"/>
-                                <connections>
-                                    <action selector="defaultTipValuesChanged:" destination="etB-Sj-7ez" eventType="editingDidEnd" id="mTc-Hg-ORc"/>
-                                    <action selector="editingDidBegin:" destination="etB-Sj-7ez" eventType="editingDidBegin" id="Aru-Wt-94K"/>
-                                </connections>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.20392158630000001" green="0.2823529541" blue="0.36862745879999997" alpha="1" colorSpace="deviceRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="gjh-Ku-g6L" firstAttribute="height" secondItem="Js0-jL-ync" secondAttribute="height" id="2rI-h1-thk"/>
+                            <constraint firstAttribute="centerX" secondItem="rB9-aC-1Sf" secondAttribute="centerX" id="1jf-O4-oAz"/>
+                            <constraint firstAttribute="centerX" secondItem="xWC-wE-8nD" secondAttribute="centerX" id="9bu-lx-bCL"/>
                             <constraint firstAttribute="centerX" secondItem="WRf-FT-p1M" secondAttribute="centerX" id="EvW-Dd-gCj"/>
-                            <constraint firstItem="gjh-Ku-g6L" firstAttribute="width" secondItem="Js0-jL-ync" secondAttribute="width" id="NVy-ot-225"/>
+                            <constraint firstItem="xWC-wE-8nD" firstAttribute="top" secondItem="rB9-aC-1Sf" secondAttribute="bottom" constant="8" id="UaS-ag-KQO"/>
+                            <constraint firstAttribute="centerX" secondItem="DAO-Ot-wkf" secondAttribute="centerX" id="jMb-gM-uWA"/>
+                            <constraint firstAttribute="centerX" secondItem="Xpa-rV-ai4" secondAttribute="centerX" id="q2r-C6-EDw"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="bLi-9P-MyS" appends="YES" id="Urb-a7-4Mk"/>
