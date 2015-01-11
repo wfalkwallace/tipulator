@@ -3,17 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "gear-outline.png"
+      "filename" : "gear-outline-light.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "gear-outline-1.png"
+      "filename" : "gear-outline-light-1.png"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "gear-outline-2.png"
+      "filename" : "gear-outline-light-2.png"
     }
   ],
   "info" : {
