@@ -6,8 +6,7 @@ Codepath iOS Course Tip Calculator Prework
 The Tipulator app is designed for simplicity, allowing a user to preset two default tip percentages, default split, and default currency.
 
 ---
-
-![tipulator.gif]
+![screencast](tipulator.gif)
 
 ---
 Process:
@@ -19,7 +18,6 @@ Process:
 That brings total time to around 3-5 hours.
 
 ---
-
 Design decisions:
 
 - Nobody really tips low anymore... most people will tip around 20% and bump that to 25ish for great service and they tend to have two (normal and high) values in mind. I simplified the defaults to 2 settable options to reflect that practice. I considered adding functionality to override that, but KISS.
@@ -27,5 +25,4 @@ Design decisions:
 - had some animations, mucked up some parts, I'll get there...
 
 ---
-
 License file intentionally omitted - full source ownership and rights maintained by creator.
