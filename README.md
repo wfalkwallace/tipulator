@@ -26,3 +26,7 @@ Design decisions:
 
 ---
 License file intentionally omitted - full source ownership and rights maintained by creator.
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/wfalkwallace/tipulator/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
